@@ -1,8 +1,8 @@
 # Drone Race Project
 
-Personal Implementation with Learning Drone Race with Interactive Learning
+Personal Implementation of Learning Drone Race with Interactive Learning
 
-
+[TODO]
 
 # Source
 
