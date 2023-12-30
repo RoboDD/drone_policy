@@ -1,0 +1,9 @@
+# General parameters
+# Algorithm hyperparameters
+# Checkpoint saving/loading
+# Action space dimensions
+# Observation space dimensions
+# Environment hyperparameters
+# Network sizes
+# Reward parameters
+# Visualization configuration

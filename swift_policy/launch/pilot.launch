@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="quad_name"/>
+
+    <node name="agiros_pilot" pkg="agiros" type="agiros" output="screen">
+        <param name="agi_param_dir" value="$(find agilib)/params"/>
+        <param name="ros_param_dir" value="$(find agiros)/parameters"/>
+        <param name="pilot_config" value="arena_pilot_realsense_onboard_ctrl.yaml"/>
+        <remap from="agiros_pilot/pose_estimate" to="/mocap/$(arg quad_name)/pose"/>
+        <remap from="agiros_pilot/odometry_estimate" to="/muted/camera/odom/sample"/>
+        <remap from="agiros_pilot/guard_pose_estimate" to="/mocap/$(arg quad_name)/pose"/>
+        <remap from="agiros_pilot/mavros/battery" to="/$(arg quad_name)/mavros/battery_muted"/>
+    </node>
+
+    <include file="$(find agiros)/launch/mavros/betaflight.launch"></include>
+
+</launch>

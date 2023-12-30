@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="quad_name"/>
+
+    <group ns="$(arg quad_name)">
+        <!-- Agiros Pilot -->
+        <include file="$(find quad_rl_tf)/launch/include/pilot.launch">
+            <arg name="quad_name" value="$(arg quad_name)"/>
+        </include>
+
+        <!-- RealSense T265 -->
+        <include file="$(find quad_rl_tf)/launch/include/t265.launch">
+        </include>
+
+        <!-- Detector -->
+        <include file="$(find detector_ros)/launch/detector_ros_arena.launch">
+        </include>
+
+        <!-- Kalman Filter Node -->
+        <include file="$(find drift_estimator_ros)/launch/drift_estimator.launch">
+        </include>
+
+        <!-- RL Node -->
+        <node pkg="quad_rl_tf" name="rl_ros_node" type="rl_ros_node.py" output="screen">
+            <param name="quad_name" value="$(arg quad_name)"/>
+        </node>
+
+
+
+    </group>
+</launch>
