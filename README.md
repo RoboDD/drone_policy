@@ -1,4 +1,12 @@
-# Champion-Level Drone Racing Using Deep Reinforcement Learning
+# Drone Race Project
+
+Personal Implementation with interactive learning
+
+
+
+# Source
+Code is adopted from: [https://zenodo.org/records/7955278](https://zenodo.org/records/7955278)
+Champion-Level Drone Racing Using Deep Reinforcement Learning
 This pseudocode accompanies the manuscript. It consists of three parts:
 
 1. `drift_estimator`: pseudocode for estimating VIO drift from gate detections and VIO readings.
