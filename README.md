@@ -5,9 +5,10 @@ Personal Implementation with Learning Drone Race with Interactive Learning
 
 
 # Source
+
 Code is adopted from: [https://zenodo.org/records/7955278](https://zenodo.org/records/7955278)
 
-Champion-Level Drone Racing Using Deep Reinforcement Learning
+Kaufmann, E., Bauersfeld, L., Loquercio, A., Müller, M., Koltun, V. and Scaramuzza, D., 2023. Champion-level drone racing using deep reinforcement learning. Nature, 620(7976), pp.982-987.
 
 This pseudocode accompanies the manuscript. It consists of three parts:
 
